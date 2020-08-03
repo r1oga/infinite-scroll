@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+html {
+  /*
+    prevent that padding adds extra height/width
+    to the page and causes scrolling
+  */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Teko, monospace;
+  margin: 0;
+  min-height: 100vh;
+  background: #16171b;
+  color: whitesmoke;
+}
+
+h1 {
+  text-align: center;
+  margin: 25px;
+  margin-bottom: 15px;
+  font-size: 40px;
+  letter-spacing: 8px;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(245, 245, 245, 0.8);
+}
+
+.loader img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-container {
+  margin: 10px 30%;
+}
+
+.image-container img {
+  width: 100%;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .image-container {
+    margin: 10px;
+  }
+}
