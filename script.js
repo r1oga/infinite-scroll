@@ -1,8 +1,8 @@
-const ACCESS_KEY = process.env.ACCESS_KEY
+const ACCESS_KEY = '0dnKLDJanu1rkUc7Ao4rkz2qg-Kpgg7a7d98boYMFcc'
 const API_URL = `https://api.unsplash.com/photos/random/?client_id=${ACCESS_KEY}`
 
 // 🍑 & 🐈
-const KEYWORDS = 'sexy+bikini+lingerie+cats+kitties'
+const KEYWORDS = 'sexy+bikini+lingerie+kitten'
 
 const imageContainer = document.getElementById('image-container')
 const loader = document.getElementById('loader')
@@ -73,9 +73,9 @@ window.addEventListener('scroll', () => {
     ready
   ) {
     ready = false
-    getPhotos(20, KEYWORDS)
+    getPhotos(10, KEYWORDS)
   }
 })
 
 // on load
-getPhotos(5, KEYWORDS)
+getPhotos(4, KEYWORDS)
