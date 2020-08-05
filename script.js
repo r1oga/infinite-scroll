@@ -67,13 +67,14 @@ const getPhotos = async (numPhotosToLoad, query) => {
 }
 
 //  if scrolling near bottom of page, load more photos
-window.addEventListener('scroll', () => {
-  if (
-    window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000 &&
-    ready
-  ) {
+count = 1
+step = 400
+imageContainer.addEventListener('scroll', event => {
+  if (event.path[0].scrollTop > step * count) {
+    step = 2000
     ready = false
     getPhotos(10, KEYWORDS)
+    count++
   }
 })
 

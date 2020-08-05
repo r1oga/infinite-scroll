@@ -6,6 +6,8 @@ html {
     to the page and causes scrolling
   */
   box-sizing: border-box;
+  overflow: hidden;
+  --thumbBG: peachpuff;
 }
 
 body {
@@ -18,7 +20,7 @@ body {
 
 h1 {
   text-align: center;
-  margin: 5px 25px 15px 25px;
+  margin: 1rem 25px 1rem 25px;
   font-size: 40px;
   letter-spacing: 8px;
 }
@@ -41,22 +43,36 @@ h1 {
 
 .image-container {
   margin: 10px 30%;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG);
+  border: none;
+  height: calc(100vh - 8.5rem); /* - header - footer*/
+}
+
+.image-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.image-container::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
 }
 
 .image-container img {
-  width: 100%;
-  margin-top: 5px;
+  width: 98%;
+  margin-top: 5px auto 0 auto;
 }
 
 a {
   cursor: pointer;
   text-decoration: underline;
-  color: #f5f5f5;
+  color: peachpuff;
 }
 
-p {
+footer {
   text-align: center;
-  margin: 10px 0px 0px;
+  margin: 1rem 0 0 0;
   font-size: 18px;
 }
 
