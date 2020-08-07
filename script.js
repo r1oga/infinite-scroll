@@ -77,6 +77,7 @@ imageContainer.addEventListener('scroll', event => {
   if (shouldLoadMorePhotos(event.target, 150)) {
     ready = false
     getPhotos(10, KEYWORDS)
+    count++
   }
 })
 
